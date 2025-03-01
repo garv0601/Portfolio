@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import { PiHexagonThin } from "react-icons/pi";
+import { PiCircleThin } from "react-icons/pi";
+
 
 const HeroPic = () => {
   return (
@@ -11,14 +13,17 @@ const HeroPic = () => {
       viewport={{ once: false, amount: 0 }}
       className=" h-full flex items-center justify-center "
     >
+      
       <img
-        src="../../public/images/HexaPic.png"
-        alt="Abdelrahman Qassem"
-        className="max-h-[450px] w-auto"
-      />
-
+  src="../../public/images/Garvit Bansal photo.png"
+  alt="Garvit Bansal"
+  className="w-[402px] h-[402px] object-cover object-top" 
+  style={{
+    borderRadius: "50%", 
+  }}
+/>
       <div className=" absolute -z-10 flex justify-center items-center animate-pulse ">
-        <PiHexagonThin className=" md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-cyan blur-md animate-[spin_20s_linear_infinite] " />
+        <PiCircleThin  className=" md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-cyan blur-md animate-[spin_20s_linear_infinite]" />
       </div>
     </motion.div>
   );

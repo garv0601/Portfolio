@@ -5,32 +5,32 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const projects = [
   {
-    name: "Vacation of Africa",
-    year: "Mar2022",
+    name: "Mast Mathri",
+    year: "Jan2024",
     align: "right",
-    image: "../../public/images/website-img-1.jpg",
-    link: "#",
+    image: "../../public/images/mast mathri image.png",
+    link: "https://mast-mathri.vercel.app/",
   },
   {
-    name: "Moola App",
-    year: "Sept2022",
+    name: "SOSH",
+    year: "Nov2024",
     align: "left",
-    image: "../../public/images/website-img-2.webp",
-    link: "#",
+    image: "../../public/images/sosh image .png",
+    link: "https://mern-project-wine.vercel.app/", // Add actual project link
   },
   {
-    name: "Tourzania",
-    year: "Jan2023",
+    name: "Travelly ",
+    year: "Jun2024",
     align: "right",
-    image: "../../public/images/website-img-3.jpg",
-    link: "#",
+    image: "../../public/images/travelly image .png",
+    link: "https://travelly-jet.vercel.app/", // Add actual project link
   },
   {
-    name: "Bank of Luck",
-    year: "May2024",
+    name: "Rock Paper & Scissors",
+    year: "Jun2023",
     align: "left",
-    image: "../../public/images/website-img-4.jpg",
-    link: "#",
+    image: "../../public/images/rock paper image.png",
+    link: "https://rock-paper-game-puce.vercel.app/", // Add actual project link
   },
 ];
 
@@ -54,6 +54,9 @@ const ProjectsMain = () => {
               year={project.year}
               align={project.align}
               image={project.image}
+              link={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
             />
           );
         })}

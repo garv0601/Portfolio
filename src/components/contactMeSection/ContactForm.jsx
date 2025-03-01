@@ -6,28 +6,29 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
   const form = useRef();
+
+  const handleName = (e) => setName(e.target.value);
+  const handleEmail = (e) => setEmail(e.target.value);
+  const handleMessage = (e) => setMessage(e.target.value);
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_ko3hmpt", "template_ahbmmqd", form.current, {
-        publicKey: "I6HAT5mUZH7WHabGE",
+      .sendForm("service_wlzmao5", "template_zksz5vp", form.current, {
+        publicKey: "E1FHOmG03qctzQ9ja",
       })
       .then(
         () => {
-          setEmail("");
+          setSuccess("Message Sent Successfully! ✅");
+
+          // Reset form fields
           setName("");
+          setEmail("");
           setMessage("");
-          setSuccess("Message Sent Succesfully");
+
+          // Remove success message after 3 seconds
+          setTimeout(() => setSuccess(""), 3000);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -37,7 +38,7 @@ const ContactForm = () => {
 
   return (
     <div>
-      <p className="text-cyan">{success}</p>
+      {success && <p className="text-green-500 font-bold text-lg">{success}</p>}
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
         <input
           type="text"
@@ -58,13 +59,12 @@ const ContactForm = () => {
           onChange={handleEmail}
         />
         <textarea
-          type="text"
           name="message"
           rows="9"
           cols="50"
           placeholder="Message"
           required
-          className=" rounded-lg bg-lightBrown p-2"
+          className="rounded-lg bg-lightBrown p-2"
           value={message}
           onChange={handleMessage}
         />

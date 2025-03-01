@@ -2,13 +2,15 @@ import SingleSkill from "./SingleSkill";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiTypescript } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
+import { TbFileTypeSql } from "react-icons/tb";
 import { SiNextdotjs } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+import { FaPython } from "react-icons/fa";
+
 
 const skills = [
   {
@@ -24,20 +26,20 @@ const skills = [
     icon: IoLogoJavascript,
   },
   {
-    skill: "TypeScript",
-    icon: SiTypescript,
+    skill: "Python",
+    icon: FaPython ,
   },
   {
     skill: "ReactJS",
     icon: FaReact,
   },
   {
-    skill: "Redux",
-    icon: SiRedux,
+    skill: "Firebase",
+    icon: IoLogoFirebase ,
   },
   {
-    skill: "NextJS",
-    icon: SiNextdotjs,
+    skill: "SQL",
+    icon: TbFileTypeSql ,
   },
   {
     skill: "TailwindCSS",
