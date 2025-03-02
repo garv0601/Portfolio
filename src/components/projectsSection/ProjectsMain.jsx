@@ -8,28 +8,28 @@ const projects = [
     name: "Mast Mathri",
     year: "Jan2024",
     align: "right",
-    image: "public/images/mast mathri image.png",
+    image: "/images/mast mathri image.png",
     link: "https://mast-mathri.vercel.app/",
   },
   {
     name: "SOSH",
     year: "Nov2024",
     align: "left",
-    image: "public/images/sosh image .png",
+    image: "/images/sosh image .png",
     link: "https://mern-project-wine.vercel.app/", // Add actual project link
   },
   {
     name: "Travelly ",
     year: "Jun2024",
     align: "right",
-    image: "public/images/travelly image .png",
+    image: "/images/travelly image .png",
     link: "https://travelly-jet.vercel.app/", // Add actual project link
   },
   {
     name: "Rock Paper & Scissors",
     year: "Jun2023",
     align: "left",
-    image: "public/images/rock paper image.png",
+    image: "/images/rock paper image.png",
     link: "https://rock-paper-game-puce.vercel.app/", // Add actual project link
   },
 ];

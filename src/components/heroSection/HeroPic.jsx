@@ -15,7 +15,7 @@ const HeroPic = () => {
     >
       
       <img
-  src="public/images/Garvit Bansal photo.png"
+  src="/images/Garvit Bansal photo.png"
   alt="Garvit Bansal"
   className="w-[402px] h-[402px] object-cover object-top" 
   style={{
